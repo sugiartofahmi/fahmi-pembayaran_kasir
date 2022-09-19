@@ -1,0 +1,15 @@
+READ AND WRITE "total_pembayaran" with number
+READ AND WRITE "jumlah_uang" with number
+READ AND WRITE "kembalian" with number
+STORE "total_pembayaran" with input ""
+
+WHILE "kembalian" more than 0 
+    STORE "jumlah_uang" with input ""
+    STORE "kembalian" with CALCULATE "jumlah_uang" minus "total_pembayaran"
+
+    IF "kembalian" more than > 0
+        PRINT "kembalian"
+    else 
+        PRINT "Uang anda kurang"
+    END IF
+
